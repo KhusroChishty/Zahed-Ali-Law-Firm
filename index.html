@@ -1,0 +1,58 @@
+import { Card, CardContent } from "@/components/ui/card"; import { Badge } from "@/components/ui/badge"; import { CalendarDays, MapPin, Clock, Scale } from "lucide-react"; import { motion } from "framer-motion";
+
+export default function AnniversaryPage() { return ( <div className="min-h-screen bg-gradient-to-br from-white to-orange-50 p-6"> <div className="max-w-4xl mx-auto text-center space-y-6"> <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} > <Scale size={64} className="mx-auto text-orange-600" /> <h1 className="text-4xl font-bold text-gray-800 mt-4"> Celebrating 5 Remarkable Years </h1> <p className="text-lg text-gray-600"> A journey of dedication, excellence, and service in the pursuit of justice in the heart of Hyderabad. </p> <Badge className="mt-4 text-sm bg-orange-600 hover:bg-orange-700"> Since 2020 </Badge> </motion.div>
+
+<motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.6 }}
+      className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10"
+    >
+      <Card className="rounded-2xl shadow-md">
+        <CardContent className="p-6 text-center">
+          <CalendarDays className="mx-auto text-orange-500" size={36} />
+          <h2 className="text-xl font-semibold mt-2">Date</h2>
+          <p className="text-gray-600">Saturday, 22nd February 2025</p>
+        </CardContent>
+      </Card>
+
+      <Card className="rounded-2xl shadow-md">
+        <CardContent className="p-6 text-center">
+          <Clock className="mx-auto text-orange-500" size={36} />
+          <h2 className="text-xl font-semibold mt-2">Time</h2>
+          <p className="text-gray-600">3:00 PM onwards</p>
+        </CardContent>
+      </Card>
+
+      <Card className="rounded-2xl shadow-md">
+        <CardContent className="p-6 text-center">
+          <MapPin className="mx-auto text-orange-500" size={36} />
+          <h2 className="text-xl font-semibold mt-2">Venue</h2>
+          <p className="text-gray-600">
+            #19-5-479/3/C, Nandi Muslaiguda, Attapur Road,<br />
+            Kishan Bagh, Bahadurpura, Hyderabad T.S
+          </p>
+        </CardContent>
+      </Card>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.8, duration: 0.6 }}
+      className="mt-12 text-center"
+    >
+      <p className="text-md text-gray-700">
+        Join us in reflecting on the accomplishments of the past and looking forward to a future full of promise.
+      </p>
+      <p className="mt-4 text-sm text-gray-500">
+        With gratitude,
+        <br />
+        <strong>Adv. Mohammed Zahed Ali (B.Sc, LL.B, LL.M)</strong><br />
+        Founder - M/s. Mohammed Zahed Ali Law Firm
+      </p>
+    </motion.div>
+  </div>
+</div>
+
+); }
