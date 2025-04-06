@@ -59,37 +59,52 @@
     <div class="quote">“Constitution is not a mere lawyer's document, it is a vehicle of Life, and its spirit is always the spirit of Age.” — Dr. B.R. Ambedkar</div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Legal Services -->
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Corporate Law')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">Corporate Law</h2>
-        <p class="text-sm text-gray-600">Legal aspects of business, incorporation, mergers, acquisitions...</p>
-        <button class="mt-2 text-blue-600 underline">Learn More</button>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Family & Marriage Counseling')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">Family & Marriage Counseling</h2>
-        <p class="text-sm text-gray-600">Counseling on divorce, maintenance, child custody, and family disputes...</p>
-        <button class="mt-2 text-blue-600 underline">Learn More</button>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Land & Property Disputes')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">Land & Property Disputes</h2>
-        <p class="text-sm text-gray-600">Resolving issues related to ancestral land, partition, sale disputes...</p>
-        <button class="mt-2 text-blue-600 underline">Learn More</button>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Criminal Law')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">Criminal Law</h2>
-        <p class="text-sm text-gray-600">Defending and prosecuting criminal cases in courts of law...</p>
-        <button class="mt-2 text-blue-600 underline">Learn More</button>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Civil Litigation')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">Civil Litigation</h2>
-        <p class="text-sm text-gray-600">Handling contractual disputes, torts, damages, and more...</p>
-        <button class="mt-2 text-blue-600 underline">Learn More</button>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('IPR & Trademark')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">IPR & Trademark</h2>
-        <p class="text-sm text-gray-600">Safeguarding intellectual property and trademarks...</p>
-        <button class="mt-2 text-blue-600 underline">Learn More</button>
-      </div>
+      <!-- Loop through legal areas -->
+      <script>
+        const services = [
+          'Corporate', 'Criminal Law', 'Civil Disputes', 'Family Law', 'Marriage Counselling', 'Property & Land Issues',
+          'Consumer Protection', 'Legal Notices & Documentation', 'Cyber Law', 'Labour & Employment Law',
+          'Intellectual Property Rights', 'Arbitration & Mediation', 'Cheque Bounce Cases', 'Banking & Finance',
+          'Contract Drafting', 'PIL & Human Rights', 'RTI Matters', 'Succession & Will Matters',
+          'Court Marriage & Registration', 'Women & Child Rights'
+        ];
+        const descriptions = {
+          'Corporate': 'Handling incorporation, compliance, mergers, acquisitions, contracts, and corporate disputes.',
+          'Criminal Law': 'Defending clients in criminal cases from bail to trial including white-collar crimes.',
+          'Civil Disputes': 'Property issues, civil suits, damages, injunctions, and declaratory relief.',
+          'Family Law': 'Divorce, custody, maintenance, and domestic violence matters with sensitivity.',
+          'Marriage Counselling': 'Guidance, mediation, and counselling before and after marriage.',
+          'Property & Land Issues': 'Disputes, registration, succession, title verification, and litigation.',
+          'Consumer Protection': 'Consumer complaints against defective goods, services, or frauds.',
+          'Legal Notices & Documentation': 'Drafting of notices, affidavits, agreements, and representations.',
+          'Cyber Law': 'Online frauds, data breaches, cyberbullying, and digital rights enforcement.',
+          'Labour & Employment Law': 'Employee rights, compliance, workplace disputes, and employer defence.',
+          'Intellectual Property Rights': 'Trademark, copyright, patent filing and infringement matters.',
+          'Arbitration & Mediation': 'Alternative dispute resolution for civil and commercial issues.',
+          'Cheque Bounce Cases': 'Proceedings under Section 138 of Negotiable Instruments Act.',
+          'Banking & Finance': 'Loan disputes, bank recovery matters, and NBFC legal services.',
+          'Contract Drafting': 'Drafting and vetting business and personal contracts.',
+          'PIL & Human Rights': 'Filing of Public Interest Litigations and representation in constitutional matters.',
+          'RTI Matters': 'Assistance in filing RTIs and pursuing appeals and hearings.',
+          'Succession & Will Matters': 'Probate, succession certificate, will drafting, and family settlement.',
+          'Court Marriage & Registration': 'Legal support for special marriage acts and documentation.',
+          'Women & Child Rights': 'Legal aid and action under POCSO, DV Act, and constitutional protection.',
+        };
+        window.onload = () => {
+          const container = document.querySelector('.grid');
+          services.forEach(title => {
+            const div = document.createElement('div');
+            div.className = 'bg-white p-6 rounded-xl shadow hover:shadow-lg transition';
+            div.setAttribute('onclick', `openModal('${title}')`);
+            div.innerHTML = `
+              <h2 class="text-xl font-semibold text-orange-600 mb-2">${title}</h2>
+              <p class="text-sm text-gray-600">${descriptions[title].slice(0, 70)}...</p>
+              <button class="mt-2 text-blue-600 underline">Learn More</button>
+            `;
+            container.appendChild(div);
+          });
+        };
+      </script>
     </div>
 
     <!-- Testimonials -->
@@ -139,22 +154,11 @@
 
   <script>
     lucide.createIcons();
-
-    const descriptions = {
-      'Corporate Law': 'Corporate law involves the legal aspects of business operations including incorporation, mergers, acquisitions, and compliance with corporate governance.',
-      'Family & Marriage Counseling': 'Legal guidance and counseling on matrimonial issues including divorce, custody, and mutual consent matters.',
-      'Land & Property Disputes': 'Resolving disputes related to sale deeds, land partition, encroachments, and illegal possession.',
-      'Criminal Law': 'Handling criminal offenses including bail, FIR quashing, and trial representations in various courts.',
-      'Civil Litigation': 'Civil suits related to contracts, recovery of money, damages, and declarations.',
-      'IPR & Trademark': 'Registering, protecting, and litigating issues related to intellectual property, patents, and trademarks.'
-    };
-
     function openModal(title) {
       document.getElementById('modalTitle').innerText = title;
       document.getElementById('modalDesc').innerText = descriptions[title] || 'Description coming soon...';
       document.getElementById('modal').style.display = 'block';
     }
-
     function closeModal() {
       document.getElementById('modal').style.display = 'none';
     }
