@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M/s. Mohammed Zahed Ali Law Firm</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body {
@@ -14,32 +14,11 @@
       padding: 0;
       color: #333;
     }
-    header {
-      background: #ea580c;
-      padding: 1rem 0;
-      text-align: center;
-      color: white;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
     .container {
-      max-width: 960px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 2rem;
       text-align: center;
-    }
-    .icon {
-      color: #ea580c;
-      width: 64px;
-      height: 64px;
-      margin: 0 auto;
     }
     h1 {
       font-size: 2.5rem;
@@ -55,28 +34,38 @@
       font-size: 0.85rem;
       margin-top: 1rem;
     }
-    .section {
-      margin-top: 3rem;
-    }
-    .grid {
+    .grid, .practice-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       justify-content: center;
+      margin-top: 3rem;
     }
-    .card {
+    .card, .practice-card {
       background-color: white;
       border-radius: 1rem;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       padding: 1.5rem;
-      flex: 1 1 260px;
+      flex: 1 1 280px;
       max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card-icon {
       color: #ea580c;
       width: 36px;
       height: 36px;
       margin-bottom: 0.5rem;
+    }
+    .learn-more {
+      margin-top: 1rem;
+      color: #ea580c;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .learn-more:hover {
+      text-decoration: underline;
     }
     blockquote {
       font-style: italic;
@@ -99,99 +88,82 @@
       height: 400px;
       border: none;
     }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
     strong {
       color: #111;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>M/s. Mohammed Zahed Ali Law Firm</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#practice">Practice Areas</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
   <div class="container">
-    <div class="icon" data-lucide="scale"></div>
+    <h1>M/s. Mohammed Zahed Ali Law Firm</h1>
     <p>Successfully delivering legal excellence for over 5 years in the heart of Hyderabad.</p>
     <div class="badge">Established 2020</div>
+    <p style="margin-top: 2rem;">
+      Founded by <strong>Adv. Mohammed Zahed Ali</strong> (B.Sc, LL.B, LL.M), the firm stands on the principles of the Constitution of India,<br>
+      serving clients with dignity, precision, and an unwavering commitment to justice.
+    </p>
 
-    <section id="about" class="section">
-      <h2>About the Firm</h2>
-      <p>
-        Founded by <strong>Adv. Mohammed Zahed Ali</strong> (B.Sc, LL.B, LL.M), the firm stands on the principles of the Constitution of India,
-        serving clients with dignity, precision, and an unwavering commitment to justice.
-      </p>
-    </section>
-
-    <section id="practice" class="section">
-      <h2>Practice Areas</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="card-icon" data-lucide="gavel"></div>
-          <h3>Criminal Law</h3>
-          <p>Defending rights and upholding justice in criminal matters.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon" data-lucide="book-text"></div>
-          <h3>Civil Litigation</h3>
-          <p>Resolving legal disputes with clarity and compassion.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon" data-lucide="landmark"></div>
-          <h3>Family & Property Law</h3>
-          <p>Advising on inheritance, property, and family legal matters.</p>
-        </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon" data-lucide="gavel"></div>
+        <h2>Criminal Law</h2>
+        <p>Defending rights and upholding justice in criminal matters.</p>
       </div>
-    </section>
-
-    <section id="team" class="section">
-      <h2>Our Team</h2>
-      <p>We are a group of dedicated legal professionals passionate about justice.</p>
-    </section>
-
-    <section class="section">
-      <h2>Client Testimonials</h2>
-      <blockquote>
-        “The law is not a trade, not briefs, not the wages of avarice. It is a calling not a business.”<br/>
-        — Hon'ble Justice P.N. Bhagwati
-      </blockquote>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="founder">
-        <p>For consultations or legal guidance, reach out to:</p>
-        <strong>Adv. Mohammed Zahed Ali</strong><br>
-        B.Sc, LL.B, LL.M<br>
-        Founder – M/s. Mohammed Zahed Ali Law Firm
+      <div class="card">
+        <div class="card-icon" data-lucide="book-text"></div>
+        <h2>Civil Litigation</h2>
+        <p>Resolving legal disputes with clarity and compassion.</p>
       </div>
-      <div class="map">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1234567890!2d78.4561234!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbabcd1234567%3A0xabcdefabcdef1234!2sYour+Law+Firm+Name!5e0!3m2!1sen!2sin!4v1617891234567!5m2!1sen!2sin" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="card">
+        <div class="card-icon" data-lucide="landmark"></div>
+        <h2>Family & Property Law</h2>
+        <p>Advising on inheritance, property, and family legal matters.</p>
       </div>
-    </section>
+    </div>
+
+    <h2 style="margin-top: 4rem;">Legal Practice Areas</h2>
+    <div class="practice-grid">
+      <div class="practice-card"><h3>CORPORATE</h3><p>This involves dealing with the legal aspects of business...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>CIVIL & CRIMINAL</h3><p>Civil rights attorneys work on cases...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>MATRIMONIAL DISPUTES</h3><p>This area of law relates to family relationships...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>INTELLECTUAL PROPERTIES</h3><p>This involves dealing with intellectual assets...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>LEGAL HEIRS & SUCCESSION</h3><p>This area handles legal heirs and succession filings...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>CBI</h3><p>CBI investigations by India’s premier investigation agency...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>MERGERS & ACQUISITIONS</h3><p>Consolidation of companies through mergers...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>REAL ESTATE</h3><p>Handling transactions and disputes involving property...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>EMPLOYMENT & LABOR</h3><p>Workplace-related issues and labor laws...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>PERSONAL INJURY</h3><p>Legal support for injury due to negligence...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>INSOLVENCY & BANKRUPTCY</h3><p>Support for clients seeking financial restructuring...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>IMMIGRATION</h3><p>Legal rights and duties related to immigration...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>TAXATION</h3><p>Rules and regulations governing taxation...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>NATIONAL & INTL. TRANSACTIONS</h3><p>Handling cross-border business transactions...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>CYBER CRIME</h3><p>Addressing digital and cyber-related crimes...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>CONSUMER FORUM</h3><p>Legal protection and dispute resolution for consumers...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>DEBT RECOVERY</h3><p>Legal process for recovery of debts through DRT...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>ENFORCEMENT DIRECTORATE</h3><p>Investigation and prosecution of economic offenses...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>DRUG OFFENSE</h3><p>Law regarding possession and distribution of drugs...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>CAPITAL MARKET</h3><p>Legalities of stock and securities markets...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>PRIVATE EQUITY</h3><p>Legal aspects of investing in private companies...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>FOREIGN EXCHANGE</h3><p>Legal rules governing foreign exchange transactions...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+      <div class="practice-card"><h3>ARBITRATION</h3><p>Alternative dispute resolution outside of court...</p><a href="#" class="learn-more">LEARN MORE</a></div>
+    </div>
+
+    <blockquote>
+      “The law is not a trade, not briefs, not the wages of avarice. It is a calling not a business.”<br />
+      — Hon'ble Justice P.N. Bhagwati
+    </blockquote>
+
+    <div class="founder">
+      <p>For consultations or legal guidance, reach out to:</p>
+      <strong>Adv. Mohammed Zahed Ali</strong><br />
+      B.Sc, LL.B, LL.M<br />
+      Founder – M/s. Mohammed Zahed Ali Law Firm
+    </div>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
-
-  <footer>
-    <p>&copy; 2025 M/s. Mohammed Zahed Ali Law Firm. All rights reserved.</p>
-    <p>Hyderabad, Telangana, India</p>
-  </footer>
 
   <script>
     lucide.createIcons();
