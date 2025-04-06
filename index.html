@@ -59,13 +59,37 @@
     <div class="quote">“Constitution is not a mere lawyer's document, it is a vehicle of Life, and its spirit is always the spirit of Age.” — Dr. B.R. Ambedkar</div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Loop through legal areas -->
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Corporate')">
-        <h2 class="text-xl font-semibold text-orange-600 mb-2">Corporate</h2>
-        <p class="text-sm text-gray-600">This involves dealing with the legal aspects of business, including incorporation...</p>
+      <!-- Legal Services -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Corporate Law')">
+        <h2 class="text-xl font-semibold text-orange-600 mb-2">Corporate Law</h2>
+        <p class="text-sm text-gray-600">Legal aspects of business, incorporation, mergers, acquisitions...</p>
         <button class="mt-2 text-blue-600 underline">Learn More</button>
       </div>
-      <!-- Repeat for all other legal topics dynamically (to be inserted via JS or repeated HTML blocks) -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Family & Marriage Counseling')">
+        <h2 class="text-xl font-semibold text-orange-600 mb-2">Family & Marriage Counseling</h2>
+        <p class="text-sm text-gray-600">Counseling on divorce, maintenance, child custody, and family disputes...</p>
+        <button class="mt-2 text-blue-600 underline">Learn More</button>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Land & Property Disputes')">
+        <h2 class="text-xl font-semibold text-orange-600 mb-2">Land & Property Disputes</h2>
+        <p class="text-sm text-gray-600">Resolving issues related to ancestral land, partition, sale disputes...</p>
+        <button class="mt-2 text-blue-600 underline">Learn More</button>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Criminal Law')">
+        <h2 class="text-xl font-semibold text-orange-600 mb-2">Criminal Law</h2>
+        <p class="text-sm text-gray-600">Defending and prosecuting criminal cases in courts of law...</p>
+        <button class="mt-2 text-blue-600 underline">Learn More</button>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('Civil Litigation')">
+        <h2 class="text-xl font-semibold text-orange-600 mb-2">Civil Litigation</h2>
+        <p class="text-sm text-gray-600">Handling contractual disputes, torts, damages, and more...</p>
+        <button class="mt-2 text-blue-600 underline">Learn More</button>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" onclick="openModal('IPR & Trademark')">
+        <h2 class="text-xl font-semibold text-orange-600 mb-2">IPR & Trademark</h2>
+        <p class="text-sm text-gray-600">Safeguarding intellectual property and trademarks...</p>
+        <button class="mt-2 text-blue-600 underline">Learn More</button>
+      </div>
     </div>
 
     <!-- Testimonials -->
@@ -117,8 +141,12 @@
     lucide.createIcons();
 
     const descriptions = {
-      'Corporate': 'Corporate law involves the legal aspects of business operations including incorporation, mergers, and acquisitions...',
-      // Add all 20+ legal topics with corresponding full descriptions here
+      'Corporate Law': 'Corporate law involves the legal aspects of business operations including incorporation, mergers, acquisitions, and compliance with corporate governance.',
+      'Family & Marriage Counseling': 'Legal guidance and counseling on matrimonial issues including divorce, custody, and mutual consent matters.',
+      'Land & Property Disputes': 'Resolving disputes related to sale deeds, land partition, encroachments, and illegal possession.',
+      'Criminal Law': 'Handling criminal offenses including bail, FIR quashing, and trial representations in various courts.',
+      'Civil Litigation': 'Civil suits related to contracts, recovery of money, damages, and declarations.',
+      'IPR & Trademark': 'Registering, protecting, and litigating issues related to intellectual property, patents, and trademarks.'
     };
 
     function openModal(title) {
