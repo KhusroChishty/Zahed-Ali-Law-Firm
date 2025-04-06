@@ -14,6 +14,21 @@
       padding: 0;
       color: #333;
     }
+    header {
+      background: #ea580c;
+      padding: 1rem 0;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -40,12 +55,14 @@
       font-size: 0.85rem;
       margin-top: 1rem;
     }
+    .section {
+      margin-top: 3rem;
+    }
     .grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       justify-content: center;
-      margin-top: 3rem;
     }
     .card {
       background-color: white;
@@ -82,65 +99,99 @@
       height: 400px;
       border: none;
     }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
     strong {
       color: #111;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>M/s. Mohammed Zahed Ali Law Firm</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#practice">Practice Areas</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <div class="container">
     <div class="icon" data-lucide="scale"></div>
-    <h1>M/s. Mohammed Zahed Ali Law Firm</h1>
     <p>Successfully delivering legal excellence for over 5 years in the heart of Hyderabad.</p>
     <div class="badge">Established 2020</div>
 
-    <p style="margin-top: 2rem;">
-      Founded by <strong>Adv. Mohammed Zahed Ali</strong> (B.Sc, LL.B, LL.M), the firm stands on the principles of the Constitution of India, <br>
-      serving clients with dignity, precision, and an unwavering commitment to justice.
-    </p>
+    <section id="about" class="section">
+      <h2>About the Firm</h2>
+      <p>
+        Founded by <strong>Adv. Mohammed Zahed Ali</strong> (B.Sc, LL.B, LL.M), the firm stands on the principles of the Constitution of India,
+        serving clients with dignity, precision, and an unwavering commitment to justice.
+      </p>
+    </section>
 
-    <div class="grid">
-      <div class="card">
-        <div class="card-icon" data-lucide="gavel"></div>
-        <h2>Criminal Law</h2>
-        <p>Defending rights and upholding justice in criminal matters.</p>
+    <section id="practice" class="section">
+      <h2>Practice Areas</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon" data-lucide="gavel"></div>
+          <h3>Criminal Law</h3>
+          <p>Defending rights and upholding justice in criminal matters.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" data-lucide="book-text"></div>
+          <h3>Civil Litigation</h3>
+          <p>Resolving legal disputes with clarity and compassion.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" data-lucide="landmark"></div>
+          <h3>Family & Property Law</h3>
+          <p>Advising on inheritance, property, and family legal matters.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon" data-lucide="book-text"></div>
-        <h2>Civil Litigation</h2>
-        <p>Resolving legal disputes with clarity and compassion.</p>
+    </section>
+
+    <section id="team" class="section">
+      <h2>Our Team</h2>
+      <p>We are a group of dedicated legal professionals passionate about justice.</p>
+    </section>
+
+    <section class="section">
+      <h2>Client Testimonials</h2>
+      <blockquote>
+        “The law is not a trade, not briefs, not the wages of avarice. It is a calling not a business.”<br/>
+        — Hon'ble Justice P.N. Bhagwati
+      </blockquote>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="founder">
+        <p>For consultations or legal guidance, reach out to:</p>
+        <strong>Adv. Mohammed Zahed Ali</strong><br>
+        B.Sc, LL.B, LL.M<br>
+        Founder – M/s. Mohammed Zahed Ali Law Firm
       </div>
-      <div class="card">
-        <div class="card-icon" data-lucide="landmark"></div>
-        <h2>Family & Property Law</h2>
-        <p>Advising on inheritance, property, and family legal matters.</p>
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1234567890!2d78.4561234!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbabcd1234567%3A0xabcdefabcdef1234!2sYour+Law+Firm+Name!5e0!3m2!1sen!2sin!4v1617891234567!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-    </div>
-
-    <blockquote>
-      “The law is not a trade, not briefs, not the wages of avarice. It is a calling not a business.”<br/>
-      — Hon'ble Justice P.N. Bhagwati
-    </blockquote>
-
-    <div class="founder">
-      <p>For consultations or legal guidance, reach out to:</p>
-      <strong>Adv. Mohammed Zahed Ali</strong><br>
-      B.Sc, LL.B, LL.M<br>
-      Founder – M/s. Mohammed Zahed Ali Law Firm
-    </div>
-
-    <div class="map">
-      <!-- Replace the src URL below with the exact Google Maps embed link for your location -->
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1234567890!2d78.4561234!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbabcd1234567%3A0xabcdefabcdef1234!2sYour+Law+Firm+Name!5e0!3m2!1sen!2sin!4v1617891234567!5m2!1sen!2sin" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
+    </section>
   </div>
+
+  <footer>
+    <p>&copy; 2025 M/s. Mohammed Zahed Ali Law Firm. All rights reserved.</p>
+    <p>Hyderabad, Telangana, India</p>
+  </footer>
 
   <script>
     lucide.createIcons();
